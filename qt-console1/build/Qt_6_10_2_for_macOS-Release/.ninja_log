@@ -1,0 +1,21 @@
+# ninja log v6
+931	983	1773248861429801780	qt-console1	6a8abe7ed57c4bff
+511	1424	1773240726713552234	CMakeFiles/qt-console1.dir/qt-console1_autogen/mocs_compilation.cpp.o	2314bb56893ed10d
+5	43	1773248860504060675	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Release/qt-console1_autogen/timestamp	ed39abd555610d05
+47	912	1773241161217440728	CMakeFiles/qt-console1.dir/timer.cpp.o	75e13d2c7a222e3f
+43	930	1773248860542558700	CMakeFiles/qt-console1.dir/main.cpp.o	5e2272f23afa036b
+5	43	1773248860504060675	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Release/qt-console1_autogen/mocs_compilation.cpp	ed39abd555610d05
+5	43	1773248860504060675	qt-console1_autogen/mocs_compilation.cpp	ed39abd555610d05
+5	43	1773248860504060675	qt-console1_autogen/timestamp	ed39abd555610d05
+8	52	1773248966337172159	qt-console1_autogen/timestamp	ed39abd555610d05
+8	52	1773248966337172159	qt-console1_autogen/mocs_compilation.cpp	ed39abd555610d05
+8	52	1773248966337172159	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Release/qt-console1_autogen/timestamp	ed39abd555610d05
+8	52	1773248966337172159	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Release/qt-console1_autogen/mocs_compilation.cpp	ed39abd555610d05
+52	1047	1773248966381087859	CMakeFiles/qt-console1.dir/main.cpp.o	5e2272f23afa036b
+1047	1200	1773248967376227800	qt-console1	6a8abe7ed57c4bff
+6	47	1773249011510572897	qt-console1_autogen/timestamp	ed39abd555610d05
+6	47	1773249011510572897	qt-console1_autogen/mocs_compilation.cpp	ed39abd555610d05
+6	47	1773249011510572897	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Release/qt-console1_autogen/timestamp	ed39abd555610d05
+6	47	1773249011510572897	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Release/qt-console1_autogen/mocs_compilation.cpp	ed39abd555610d05
+47	929	1773249011551660474	CMakeFiles/qt-console1.dir/main.cpp.o	5e2272f23afa036b
+929	985	1773249012433149940	qt-console1	6a8abe7ed57c4bff

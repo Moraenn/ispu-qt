@@ -1,0 +1,12 @@
+# ninja log v6
+1849	2013	1773170181221540330	test1.app/Contents/MacOS/test1	c0c389dafab2fa66
+652	1849	1773170180024861941	CMakeFiles/test1.dir/mainwindow.cpp.o	9dd510c5cf032eaf
+652	1838	1773170180024682978	CMakeFiles/test1.dir/main.cpp.o	fd15adf68c9c0604
+652	1804	1773170180024414513	CMakeFiles/test1.dir/test1_autogen/mocs_compilation.cpp.o	8eae2fe66a1179a8
+121	649	1773170180004880971	/Users/xmoraennx/ispu/qt/test1/build/Qt_6_10_2_for_macOS-Debug/test1_autogen/timestamp	e7533c20da9e797f
+3	126	1773170236663406000	/Users/xmoraennx/ispu/qt/test1/build/Qt_6_10_2_for_macOS-Debug/CMakeFiles/cmake.verify_globs	b6c5c4a0bef4aadb
+121	649	1773170180004880971	test1_autogen/mocs_compilation.cpp	e7533c20da9e797f
+121	649	1773170180004880971	test1_autogen/timestamp	e7533c20da9e797f
+121	649	1773170180004880971	/Users/xmoraennx/ispu/qt/test1/build/Qt_6_10_2_for_macOS-Debug/test1_autogen/mocs_compilation.cpp	e7533c20da9e797f
+126	504	1773170237093544438	build.ninja	350f042e6d54538a
+2	123	1773170237111530773	/Users/xmoraennx/ispu/qt/test1/build/Qt_6_10_2_for_macOS-Debug/CMakeFiles/cmake.verify_globs	b6c5c4a0bef4aadb

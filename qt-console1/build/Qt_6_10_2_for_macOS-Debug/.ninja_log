@@ -1,0 +1,9 @@
+# ninja log v6
+1	464	1773240566918288292	qt-console1_autogen/timestamp	2b018f7469fa845d
+1	464	1773240566918288292	qt-console1_autogen/mocs_compilation.cpp	2b018f7469fa845d
+1	464	1773240566918288292	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Debug/qt-console1_autogen/timestamp	2b018f7469fa845d
+1	464	1773240566918288292	/Users/xmoraennx/ispu/qt/qt-console1/build/Qt_6_10_2_for_macOS-Debug/qt-console1_autogen/mocs_compilation.cpp	2b018f7469fa845d
+468	1719	1773240566936274178	CMakeFiles/qt-console1.dir/timer.cpp.o	832dacd4e0f2c7ca
+467	1721	1773240566935871088	CMakeFiles/qt-console1.dir/qt-console1_autogen/mocs_compilation.cpp.o	689c95008266d490
+467	1722	1773240566936109342	CMakeFiles/qt-console1.dir/main.cpp.o	2b2c201cc8832c5d
+1722	1879	1773240568190302259	qt-console1	5262b2e9d4273612

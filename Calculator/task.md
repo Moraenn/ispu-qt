@@ -1,0 +1,4 @@
+- use Russian language to make comments, white files and answer in a chat
+- explore this folder that consists of a Qt app implementing a calculator. correct any mistakes made here but dont overcomplicate this code so it would still be beginner-friendly. 
+- make an `explanation.md` file where you should note every mistake explaining why it is bad. 
+- make a `theory.md` file where you should play a role of a teacher explaining what's goin' on to a complete newbie at Qt framework. consider that your only student is a C++ medium user but knows nothing about the Qt. Make your explanations as simple as you can. Your main goal is that your student would be confident at presenting this project to wise professors at the Garvard University

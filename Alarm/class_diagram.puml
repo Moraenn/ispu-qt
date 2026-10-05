@@ -1,0 +1,40 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class QWidget
+class QLCDNumber
+class QSpinBox
+class QCheckBox
+class QLabel
+class QTimer
+
+class AlarmWindow {
+  - m_timeDisplay : QLCDNumber*
+  - m_hourSpinBox : QSpinBox*
+  - m_minuteSpinBox : QSpinBox*
+  - m_alarmEnabledCheckBox : QCheckBox*
+  - m_alarmTimeLabel : QLabel*
+  - m_statusLabel : QLabel*
+  - m_clockTimer : QTimer*
+  - m_lastTriggeredDate : QDate
+  - m_lastTriggeredHour : int
+  - m_lastTriggeredMinute : int
+  + AlarmWindow(parent : QWidget* = nullptr)
+  --
+  - setupUi() : void
+  - connectSignals() : void
+  - triggerAlarm() : void
+  - resetTriggeredState() : void
+  - updateCurrentTime() : void
+  - updateAlarmPreview() : void
+  - setAlarmEnabled(enabled : bool) : void
+}
+
+AlarmWindow --|> QWidget
+AlarmWindow *-- QLCDNumber
+AlarmWindow *-- QSpinBox
+AlarmWindow *-- QCheckBox
+AlarmWindow *-- QLabel
+AlarmWindow *-- QTimer
+
+@enduml

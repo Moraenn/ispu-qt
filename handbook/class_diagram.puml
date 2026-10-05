@@ -1,0 +1,80 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Stamp {
+  +title: QString
+  +country: QString
+  +year: int
+  +circulation: int
+}
+
+class StampModel {
+  -m_stamps: QVector<Stamp>
+  +rowCount(parent): int
+  +columnCount(parent): int
+  +data(index, role): QVariant
+  +headerData(section, orientation, role): QVariant
+  +flags(index): Qt::ItemFlags
+  +setData(index, value, role): bool
+  +addStamp(stamp): void
+  +updateStamp(row, stamp): bool
+  +removeStampAt(row): bool
+  +stampAt(row): Stamp
+}
+
+class StampDialog {
+  +setStamp(stamp): void
+  +stamp(): Stamp
+}
+
+class StampDialogEditor {
+  -m_stamp: Stamp
+  -m_accepted: bool
+  +setStamp(stamp): void
+  +stamp(): Stamp
+  +isAccepted(): bool
+  +openDialog(): void
+}
+
+class StampDelegate {
+  +createEditor(parent, option, index): QWidget*
+  +setEditorData(editor, index): void
+  +setModelData(editor, model, index): void
+  +updateEditorGeometry(editor, option, index): void
+}
+
+class StampTableView {
+  +currentRow(): int
+  +editCurrentStamp(): void
+}
+
+class MainWindow {
+  -m_model: StampModel*
+  -m_view: StampTableView*
+  -m_delegate: StampDelegate*
+  +addStamp(): void
+  +editStamp(): void
+  +removeStamp(): void
+  +updateActions(): void
+}
+
+QAbstractTableModel <|-- StampModel
+QDialog <|-- StampDialog
+QWidget <|-- StampDialogEditor
+QStyledItemDelegate <|-- StampDelegate
+QTableView <|-- StampTableView
+QWidget <|-- MainWindow
+
+StampModel *-- Stamp
+StampDialog ..> Stamp
+StampDialogEditor ..> StampDialog
+StampDialogEditor ..> Stamp
+StampDelegate ..> StampDialogEditor
+StampDelegate ..> StampModel
+StampTableView ..> StampDelegate
+MainWindow *-- StampModel
+MainWindow *-- StampTableView
+MainWindow *-- StampDelegate
+MainWindow ..> StampDialog
+
+@enduml
