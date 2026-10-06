@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "date": "2026-10-06",
+  "method": "Microsoft Word read-only PDF export; render_docx.py with bundled Poppler; every page visually inspected at 100% scale",
+  "total_pages": 193,
+  "documents": {
+    "Ismaylov_Qt_LR1-5.docx": {
+      "pages": 95,
+      "status": "passed",
+      "sha256": "02d6015b2a3fc78e389df4e4c7a0d2f28c94612bc9c06be3065fc85597645ca8"
+    },
+    "LR1_Ismaylov.docx": {
+      "pages": 10,
+      "status": "passed",
+      "sha256": "8b36e0d66f5b1f06f9a9af946c7e9106ece6810008ad3e6cfd74001c5e76489c"
+    },
+    "LR2_Ismaylov.docx": {
+      "pages": 10,
+      "status": "passed",
+      "sha256": "35d689eebf2ebb0e6785ac2482715dd00e52d4f083d914ed32f7655e88f94d8f"
+    },
+    "LR3_Ismaylov.docx": {
+      "pages": 15,
+      "status": "passed",
+      "sha256": "75b9bc8c4ce9e708b1743c4751b6c44d1c0323f5a45a064d8b6f9c6869f23a45"
+    },
+    "LR4_Ismaylov.docx": {
+      "pages": 22,
+      "status": "passed",
+      "sha256": "49c9717a3c5325764c15348bb676f2efba77b3e198f127139e758aeb84c098f8"
+    },
+    "LR5_Ismaylov.docx": {
+      "pages": 41,
+      "status": "passed",
+      "sha256": "06013f8f2dab1bcff683c32329727b5f89e3946ab65c55e1db3e13c655f72765"
+    }
+  },
+  "findings": [],
+  "portable_windows": {
+    "applications": 5,
+    "launches": "passed",
+    "PATH": "Windows system directories only"
+  }
+}

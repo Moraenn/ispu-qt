@@ -1,0 +1,9 @@
+digraph G { graph [rankdir=TB, bgcolor="white", nodesep=0.24, ranksep=0.40, pad=0.10]; node [shape=plain, fontname="Tinos", fontsize=12]; edge [fontname="Tinos", fontsize=10, arrowsize=0.7];
+w [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">PlannerWindow : QMainWindow</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">таблицы заданий и занятий</TD></TR></TABLE>>];
+f [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">TaskFilter<BR ALIGN="CENTER"/>: QSortFilterProxyModel</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ setSearch(), setStatus()<BR ALIGN="LEFT"/># filterAcceptsRow()</TD></TR></TABLE>>];
+e [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">TaskDelegate<BR ALIGN="CENTER"/>: QStyledItemDelegate</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ paint()</TD></TR></TABLE>>];
+tm [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">TaskModel<BR ALIGN="CENTER"/>: QAbstractTableModel</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ data(), taskAt(), reload()</TD></TR></TABLE>>];
+sm [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">SessionModel<BR ALIGN="CENTER"/>: QAbstractTableModel</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ data(), sessionId()</TD></TR></TABLE>>];
+c [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">PlannerController<BR ALIGN="CENTER"/>changed()</TD></TR></TABLE>>];
+w -> f [label="model"]; w -> e [style=dashed,label="delegate"]; w -> sm [label="через proxy"]; f -> tm [label="sourceModel"]; e -> tm [style=dashed,label="роли"]; tm -> c [style=dashed,label="данные"]; sm -> c [style=dashed,label="данные"]; {rank=same;f;e;} {rank=same;tm;sm;}
+}

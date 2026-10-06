@@ -1,0 +1,7 @@
+FROM ubuntu:24.04
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential cmake ninja-build qt6-base-dev xvfb xauth python3 \
+    fonts-dejavu-core && rm -rf /var/lib/apt/lists/*
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 TZ=Europe/Moscow
+WORKDIR /work

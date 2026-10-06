@@ -1,13 +1,11 @@
-QT += core gui widgets
-
+QT += widgets
 CONFIG += c++17
+TEMPLATE = app
+TARGET = Alarm
 
-SOURCES += \
-    alarmwindow.cpp \
+SOURCES += alarmwindow.cpp \
     main.cpp
 
-HEADERS += \
-    alarmwindow.h
+HEADERS += alarmwindow.h
 
-TARGET = Alarm
-TEMPLATE = app
+msvc:QMAKE_CXXFLAGS += /utf-8

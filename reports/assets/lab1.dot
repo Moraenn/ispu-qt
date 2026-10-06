@@ -1,0 +1,7 @@
+digraph G { graph [rankdir=TB, bgcolor="white", nodesep=0.24, ranksep=0.40, pad=0.10]; node [shape=plain, fontname="Tinos", fontsize=12]; edge [fontname="Tinos", fontsize=10, arrowsize=0.7];
+q [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">QWidget</TD></TR></TABLE>>];
+c [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">Calculator</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">displayLabel : QLabel*<BR ALIGN="LEFT"/>expressionLabel : QLabel*<BR ALIGN="LEFT"/>stack : QStack&lt;QString&gt;</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ input(text), calculate()<BR ALIGN="LEFT"/>+ clearAll(), slotButtonClicked()<BR ALIGN="LEFT"/># keyPressEvent(event)</TD></TR></TABLE>>];
+l [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">QLabel<BR ALIGN="CENTER"/>Дисплей и выражение</TD></TR></TABLE>>];
+b [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">QPushButton<BR ALIGN="CENTER"/>Цифры и действия</TD></TR></TABLE>>];
+q -> c [dir=back,arrowtail=empty]; c -> l [arrowtail=diamond,dir=both,arrowhead=none]; c -> b [arrowtail=diamond,dir=both,arrowhead=none]; {rank=same;l;b;}
+}

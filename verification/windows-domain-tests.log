@@ -1,0 +1,60 @@
+PASS leap year
+PASS leap century
+PASS non-leap century
+PASS non-leap year
+PASS invalid day
+PASS invalid month
+PASS month overflow
+PASS zero day
+PASS non-ISO date
+PASS non-numeric year
+PASS date below range
+PASS upper date boundary
+PASS add valid task
+PASS id assigned
+PASS empty title rejected without mutation
+PASS empty subject rejected
+PASS zero plan rejected
+PASS plan above limit rejected
+PASS invalid status rejected
+PASS invalid priority rejected
+PASS long title rejected
+PASS embedded NUL rejected
+PASS failed additions do not consume ids
+PASS add session
+PASS first session starts task
+PASS actual time calculated
+PASS unknown task rejected
+PASS zero session rejected
+PASS long session rejected
+PASS bad session date rejected
+PASS second session
+PASS actual time can exceed plan
+PASS complete task
+PASS done task is not overdue
+PASS unfinished task overdue
+PASS deadline today is not overdue
+PASS invalid reference date rejected
+PASS summary counts
+PASS summary time
+PASS subject summary
+PASS subject grouping updated
+PASS restore valid snapshot
+PASS restored relations
+PASS duplicate task ids rejected
+PASS invalid restore preserves old data
+PASS orphan session rejected
+PASS duplicate session ids rejected
+PASS invalid imported id rejected
+PASS id sequence restored
+PASS remove session recalculates time
+PASS remove missing session
+PASS remove task
+PASS cascade removes related sessions only
+PASS remove missing task
+PASS update missing task
+PASS empty snapshot supported
+PASS maximum task count supported
+PASS task count limit
+PASS id overflow prevented
+TOTAL 59 passed, 0 failed
