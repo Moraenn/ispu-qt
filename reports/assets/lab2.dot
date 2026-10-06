@@ -1,0 +1,7 @@
+digraph G { graph [rankdir=TB, bgcolor="white", nodesep=0.24, ranksep=0.40, pad=0.10]; node [shape=plain, fontname="Tinos", fontsize=12]; edge [fontname="Tinos", fontsize=10, arrowsize=0.7];
+q [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">QWidget</TD></TR></TABLE>>];
+a [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">AlarmWindow</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">m_clockTimer : QTimer*<BR ALIGN="LEFT"/>m_lastTriggeredDate : QDate<BR ALIGN="LEFT"/>m_lastTriggeredHour : int<BR ALIGN="LEFT"/>m_lastTriggeredMinute : int</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">− updateCurrentTime()<BR ALIGN="LEFT"/>− updateAlarmPreview()<BR ALIGN="LEFT"/>− setAlarmEnabled(enabled)<BR ALIGN="LEFT"/>− triggerAlarm(now)</TD></TR></TABLE>>];
+t [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">QTimer<BR ALIGN="CENTER"/>timeout()</TD></TR></TABLE>>];
+u [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">QLCDNumber<BR ALIGN="CENTER"/>QSpinBox (2)<BR ALIGN="CENTER"/>QCheckBox</TD></TR></TABLE>>];
+q -> a [dir=back,arrowtail=empty]; a -> t [arrowtail=diamond,dir=both,arrowhead=none]; a -> u [arrowtail=diamond,dir=both,arrowhead=none]; {rank=same;t;u;}
+}

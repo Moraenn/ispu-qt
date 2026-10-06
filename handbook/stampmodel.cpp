@@ -1,197 +1,83 @@
+#include <QStringList>
 #include "stampmodel.h"
-
 #include <QLocale>
-
-StampModel::StampModel(QObject *parent)
-    : QAbstractTableModel(parent)
-{
-    m_stamps.append({
-        QStringLiteral("Пенни Блэк"),
-        QStringLiteral("Великобритания"),
-        1840,
-        68000000
-    });
-    m_stamps.append({
-        QStringLiteral("Голубой Маврикий"),
-        QStringLiteral("Маврикий"),
-        1847,
-        500
-    });
-    m_stamps.append({
-        QStringLiteral("Чёрный грош"),
-        QStringLiteral("Пруссия"),
-        1850,
-        100000
-    });
-    m_stamps.append({
-        QStringLiteral("Почта СССР. Космос"),
-        QStringLiteral("СССР"),
-        1961,
-        3000000
-    });
+StampModel::StampModel(QObject *parent) : QAbstractTableModel(parent){
+    // Учебные записи для демонстрации интерфейса, не исторический каталог.
+    m_stamps = {{"Пенни Блэк", "Великобритания", 1840, 68000000},
+                {"Голубой Маврикий", "Маврикий", 1847, 500},
+                {"Чёрный грош", "Пруссия", 1850, 100000},
+                {"Почта СССР. Космос", "СССР", 1961, 3000000}};
 }
-
-int StampModel::rowCount(const QModelIndex &parent) const
-{
-    if (parent.isValid()) {
-        return 0;
-    }
-
-    return m_stamps.size();
+int StampModel::rowCount(const QModelIndex &parent) const { return parent.isValid() ? 0 : int(m_stamps.size()); }
+int StampModel::columnCount(const QModelIndex &parent) const { return parent.isValid() ? 0 : ColumnCount; }
+bool StampModel::validIndex(const QModelIndex &i) const{
+    return i.isValid() && i.model() == this && i.row() >= 0 && i.row() < m_stamps.size() && i.column() >= 0 && i.column() < ColumnCount;
 }
-
-int StampModel::columnCount(const QModelIndex &parent) const
-{
-    if (parent.isValid()) {
-        return 0;
-    }
-
-    return ColumnCount;
-}
-
-QVariant StampModel::data(const QModelIndex &index, int role) const
-{
-    if (!index.isValid() || index.row() < 0 || index.row() >= m_stamps.size()) {
-        return {};
-    }
-
-    const Stamp &stamp = m_stamps.at(index.row());
-
-    if (role == Qt::DisplayRole) {
-        switch (index.column()) {
-        case TitleColumn:
-            return stamp.title;
-        case CountryColumn:
-            return stamp.country;
-        case YearColumn:
-            return stamp.year;
-        case CirculationColumn:
-            return QLocale().toString(stamp.circulation);
-        default:
-            return {};
-        }
-    }
-
-    if (role == Qt::EditRole) {
-        switch (index.column()) {
-        case TitleColumn:
-            return stamp.title;
-        case CountryColumn:
-            return stamp.country;
-        case YearColumn:
-            return stamp.year;
-        case CirculationColumn:
-            return stamp.circulation;
-        default:
-            return {};
-        }
-    }
-
-    if (role == Qt::TextAlignmentRole && (index.column() == YearColumn || index.column() == CirculationColumn)) {
-        return Qt::AlignCenter;
-    }
-
-    return {};
-}
-
-QVariant StampModel::headerData(int section, Qt::Orientation orientation, int role) const
-{
-    if (role != Qt::DisplayRole) {
-        return {};
-    }
-
-    if (orientation == Qt::Horizontal) {
-        switch (section) {
-        case TitleColumn:
-            return QStringLiteral("Название марки");
-        case CountryColumn:
-            return QStringLiteral("Страна");
-        case YearColumn:
-            return QStringLiteral("Год выпуска");
-        case CirculationColumn:
-            return QStringLiteral("Тираж");
-        default:
-            return {};
-        }
-    }
-
-    return section + 1;
-}
-
-Qt::ItemFlags StampModel::flags(const QModelIndex &index) const
-{
-    if (!index.isValid()) {
-        return Qt::NoItemFlags;
-    }
-
-    return Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsEditable;
-}
-
-bool StampModel::setData(const QModelIndex &index, const QVariant &value, int role)
-{
-    if (!index.isValid() || role != Qt::EditRole || index.row() < 0 || index.row() >= m_stamps.size()) {
-        return false;
-    }
-
-    Stamp &stamp = m_stamps[index.row()];
-
-    switch (index.column()) {
-    case TitleColumn:
-        stamp.title = value.toString().trimmed();
-        break;
-    case CountryColumn:
-        stamp.country = value.toString().trimmed();
-        break;
-    case YearColumn:
-        stamp.year = value.toInt();
-        break;
+QVariant StampModel::data(const QModelIndex &i, int role) const{
+    if (!validIndex(i)) return {};
+    const Stamp &s = m_stamps.at(i.row());
+    if (role == Qt::TextAlignmentRole && i.column() >= YearColumn) return int(Qt::AlignCenter);
+    if (role != Qt::DisplayRole && role != Qt::EditRole) return {};
+    switch (i.column()){
+    case TitleColumn: return s.title;
+    case CountryColumn: return s.country;
+    case YearColumn: return s.year;
     case CirculationColumn:
-        stamp.circulation = value.toInt();
-        break;
-    default:
-        return false;
+        if (role == Qt::DisplayRole) return QLocale().toString(s.circulation);
+        return s.circulation;
+    default: return {};
     }
-
-    emit dataChanged(index, index, {Qt::DisplayRole, Qt::EditRole});
+}
+QVariant StampModel::headerData(int section, Qt::Orientation orientation, int role) const{
+    if (role != Qt::DisplayRole) return {};
+    if (orientation == Qt::Vertical) return section >= 0 && section < rowCount() ? QVariant(section + 1) : QVariant();
+    const QStringList headers = {"Название марки", "Страна", "Год выпуска", "Тираж"};
+    return section >= 0 && section < headers.size() ? QVariant(headers.at(section)) : QVariant();
+}
+Qt::ItemFlags StampModel::flags(const QModelIndex &i) const{
+    return validIndex(i) ? Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsEditable : Qt::NoItemFlags;
+}
+bool StampModel::setData(const QModelIndex &i, const QVariant &value, int role){
+    if (!validIndex(i) || role != Qt::EditRole) return false;
+    Stamp s = m_stamps.at(i.row());
+    bool ok = true;
+    switch (i.column()){
+    case TitleColumn: s.title = value.toString().trimmed(); break;
+    case CountryColumn: s.country = value.toString().trimmed(); break;
+    case YearColumn: s.year = value.toInt(&ok); break;
+    case CirculationColumn: s.circulation = value.toInt(&ok); break;
+    default: return false;
+    }
+    if (!ok) return false;
+    return updateStamp(i.row(), s);
+}
+bool StampModel::addStamp(const Stamp &s){
+    if (!validStamp(s) || m_stamps.size() >= 10000) return false;
+    const int row = int(m_stamps.size());
+    beginInsertRows({}, row, row);
+    m_stamps.append(s);
+    endInsertRows();
     return true;
 }
-
-void StampModel::addStamp(const Stamp &stamp)
-{
-    const int row = m_stamps.size();
-    beginInsertRows(QModelIndex(), row, row);
-    m_stamps.append(stamp);
-    endInsertRows();
-}
-
-bool StampModel::updateStamp(int row, const Stamp &stamp)
-{
-    if (row < 0 || row >= m_stamps.size()) {
-        return false;
-    }
-
-    m_stamps[row] = stamp;
+bool StampModel::updateStamp(int row, const Stamp &s){
+    if (row < 0 || row >= m_stamps.size() || !validStamp(s)) return false;
+    m_stamps[row] = s;
     emit dataChanged(index(row, 0), index(row, ColumnCount - 1), {Qt::DisplayRole, Qt::EditRole});
     return true;
 }
-
-bool StampModel::removeStampAt(int row)
-{
-    if (row < 0 || row >= m_stamps.size()) {
-        return false;
-    }
-
-    beginRemoveRows(QModelIndex(), row, row);
+bool StampModel::removeStampAt(int row){
+    if (row < 0 || row >= m_stamps.size()) return false;
+    beginRemoveRows({}, row, row);
     m_stamps.removeAt(row);
     endRemoveRows();
     return true;
 }
-
-Stamp StampModel::stampAt(int row) const
-{
-    if (row < 0 || row >= m_stamps.size()) {
-        return {};
-    }
-
-    return m_stamps.at(row);
+Stamp StampModel::stampAt(int row) const { return row >= 0 && row < m_stamps.size() ? m_stamps.at(row) : Stamp(); }
+bool StampModel::replaceStamps(const QVector<Stamp> &stamps){
+    if (stamps.size() > 10000) return false;
+    for (const Stamp &s : stamps) if (!validStamp(s)) return false;
+    beginResetModel();
+    m_stamps = stamps;
+    endResetModel();
+    return true;
 }

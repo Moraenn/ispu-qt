@@ -1,74 +1,45 @@
 #include "stampdialog.h"
-
 #include <QDialogButtonBox>
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QMessageBox>
-#include <QPushButton>
 #include <QSpinBox>
 #include <QVBoxLayout>
-
-StampDialog::StampDialog(QWidget *parent)
-    : QDialog(parent)
-    , m_titleEdit(new QLineEdit(this))
-    , m_countryEdit(new QLineEdit(this))
-    , m_yearSpin(new QSpinBox(this))
-    , m_circulationSpin(new QSpinBox(this))
-    , m_buttonBox(new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this))
-{
-    setModal(true);
-    setWindowTitle(QStringLiteral("Марка"));
-
+StampDialog::StampDialog(QWidget *parent) : QDialog(parent){
+    setWindowTitle("Марка");
+    m_titleEdit = new QLineEdit(this);
+    m_countryEdit = new QLineEdit(this);
+    m_titleEdit->setMaxLength(200);
+    m_countryEdit->setMaxLength(200);
+    m_yearSpin = new QSpinBox(this);
     m_yearSpin->setRange(1840, 2100);
+    m_circulationSpin = new QSpinBox(this);
     m_circulationSpin->setRange(1, 1000000000);
     m_circulationSpin->setGroupSeparatorShown(true);
-
-    auto *formLayout = new QFormLayout;
-    formLayout->addRow(QStringLiteral("Название марки:"), m_titleEdit);
-    formLayout->addRow(QStringLiteral("Страна:"), m_countryEdit);
-    formLayout->addRow(QStringLiteral("Год выпуска:"), m_yearSpin);
-    formLayout->addRow(QStringLiteral("Тираж:"), m_circulationSpin);
-
-    auto *mainLayout = new QVBoxLayout(this);
-    mainLayout->addLayout(formLayout);
-    mainLayout->addWidget(m_buttonBox);
-
-    connect(m_buttonBox, &QDialogButtonBox::accepted, this, [this]() {
-        if (m_titleEdit->text().trimmed().isEmpty()) {
-            QMessageBox::warning(this,
-                                 QStringLiteral("Ошибка ввода"),
-                                 QStringLiteral("Введите название марки."));
-            m_titleEdit->setFocus();
+    auto *form = new QFormLayout;
+    form->addRow("Название марки:", m_titleEdit);
+    form->addRow("Страна:", m_countryEdit);
+    form->addRow("Год выпуска:", m_yearSpin);
+    form->addRow("Тираж:", m_circulationSpin);
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto *layout = new QVBoxLayout(this);
+    layout->addLayout(form);
+    layout->addWidget(buttons);
+    connect(buttons, &QDialogButtonBox::accepted, this, [this](){
+        if (!validStamp(stamp())){
+            QMessageBox::warning(this, "Ошибка ввода", "Заполните название и страну. Проверьте числовые поля.");
             return;
         }
-
-        if (m_countryEdit->text().trimmed().isEmpty()) {
-            QMessageBox::warning(this,
-                                 QStringLiteral("Ошибка ввода"),
-                                 QStringLiteral("Введите страну."));
-            m_countryEdit->setFocus();
-            return;
-        }
-
         accept();
     });
-    connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
-
-void StampDialog::setStamp(const Stamp &stamp)
-{
-    m_titleEdit->setText(stamp.title);
-    m_countryEdit->setText(stamp.country);
-    m_yearSpin->setValue(stamp.year);
-    m_circulationSpin->setValue(stamp.circulation);
+void StampDialog::setStamp(const Stamp &s){
+    m_titleEdit->setText(s.title);
+    m_countryEdit->setText(s.country);
+    m_yearSpin->setValue(s.year);
+    m_circulationSpin->setValue(s.circulation);
 }
-
-Stamp StampDialog::stamp() const
-{
-    return {
-        m_titleEdit->text().trimmed(),
-        m_countryEdit->text().trimmed(),
-        m_yearSpin->value(),
-        m_circulationSpin->value()
-    };
+Stamp StampDialog::stamp() const{
+    return {m_titleEdit->text().trimmed(), m_countryEdit->text().trimmed(), m_yearSpin->value(), m_circulationSpin->value()};
 }

@@ -1,0 +1,10 @@
+Internal ctest changing into directory: C:/Users/dalvo/AppData/Local/Temp/ispu-qt-verified-20261006/build-windows
+Test project C:/Users/dalvo/AppData/Local/Temp/ispu-qt-verified-20261006/build-windows
+    Start 1: domain_tests
+1/2 Test #1: domain_tests .....................   Passed    0.02 sec
+    Start 2: qt_smoke
+2/2 Test #2: qt_smoke .........................   Passed    1.64 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   1.66 sec

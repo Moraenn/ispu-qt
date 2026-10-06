@@ -1,0 +1,130 @@
+[1/58] Automatic MOC for target Alarm
+FAILED: [code=1] Alarm/Alarm_autogen/timestamp Alarm/Alarm_autogen/mocs_compilation.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/timestamp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/mocs_compilation.cpp 
+C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\dalvo\OneDrive\Документы\ChatGPT\ispu\ispu-qt-labs-completed\ispu-qt-completed\build-windows\Alarm && "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/CMakeFiles/Alarm_autogen.dir/AutogenInfo.json Release && "C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/timestamp && "C:\Program Files\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/Alarm C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/deps C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/CMakeFiles/d/bed24ccff3922f4549a0766f9c2131cf25620865cd4f19eb14aa89440a7707f6.d"
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/Alarm/alarmwindow.h"
+into
+  "SRC:/build-windows/Alarm/Alarm_autogen/EWIEGA46WW/moc_alarmwindow.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/EWIEGA46WW/moc_alarmwindow.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/Alarm/alarmwindow.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Alarm/Alarm_autogen/EWIEGA46WW/moc_alarmwindow.cpp. Error: No such file or directory
+
+[2/58] Automatic MOC for target Calculator
+FAILED: [code=1] Calculator/Calculator_autogen/timestamp Calculator/Calculator_autogen/mocs_compilation.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/timestamp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/mocs_compilation.cpp 
+C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\dalvo\OneDrive\Документы\ChatGPT\ispu\ispu-qt-labs-completed\ispu-qt-completed\build-windows\Calculator && "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/CMakeFiles/Calculator_autogen.dir/AutogenInfo.json Release && "C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/timestamp && "C:\Program Files\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/Calculator C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/deps C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/CMakeFiles/d/ff3a658e0281277adc914c18af5b1cdf042ff4fe5194b2580a2023e66e25276a.d"
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/Calculator/calculator.h"
+into
+  "SRC:/build-windows/Calculator/Calculator_autogen/EWIEGA46WW/moc_calculator.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/EWIEGA46WW/moc_calculator.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/Calculator/calculator.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/Calculator/Calculator_autogen/EWIEGA46WW/moc_calculator.cpp. Error: No such file or directory
+
+[3/58] Automatic MOC for target handbook_lab3
+FAILED: [code=1] handbook_lab3/handbook_lab3_autogen/timestamp handbook_lab3/handbook_lab3_autogen/mocs_compilation.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/timestamp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/mocs_compilation.cpp 
+C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\dalvo\OneDrive\Документы\ChatGPT\ispu\ispu-qt-labs-completed\ispu-qt-completed\build-windows\handbook_lab3 && "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/CMakeFiles/handbook_lab3_autogen.dir/AutogenInfo.json Release && "C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/timestamp && "C:\Program Files\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/handbook_lab3 C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3 C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/deps C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/CMakeFiles/d/613d1de025822ae0f5b1528244d60b3df4aef05962f2a98cb992885eef0f757c.d"
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/handbook_lab3/stampmodel.h"
+into
+  "SRC:/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampmodel.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampmodel.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/handbook_lab3/stampmodel.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampmodel.cpp. Error: No such file or directory
+
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/handbook_lab3/mainwindow.h"
+into
+  "SRC:/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_mainwindow.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_mainwindow.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/handbook_lab3/mainwindow.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_mainwindow.cpp. Error: No such file or directory
+
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/handbook_lab3/stamptableview.h"
+into
+  "SRC:/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stamptableview.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stamptableview.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/handbook_lab3/stamptableview.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stamptableview.cpp. Error: No such file or directory
+
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/handbook_lab3/stampdialog.h"
+into
+  "SRC:/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampdialog.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampdialog.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/handbook_lab3/stampdialog.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampdialog.cpp. Error: No such file or directory
+
+
+AutoMoc subprocess error
+------------------------
+The moc process failed to compile
+  "SRC:/handbook_lab3/stampdelegate.h"
+into
+  "SRC:/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampdelegate.cpp"
+Process failed with return value 1
+
+Command
+-------
+C:/msys64/ucrt64/share/qt6/bin/moc.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -IC:/msys64/ucrt64/include/qt6/QtWidgets -IC:/msys64/ucrt64/include/qt6 -IC:/msys64/ucrt64/include/qt6/QtCore -IC:/msys64/ucrt64/share/qt6/mkspecs/win32-g++ -IC:/msys64/ucrt64/include/qt6/QtGui -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/c++/15.2.0 -IC:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32 -IC:/msys64/ucrt64/include/c++/15.2.0/backward -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include -IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed --include C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/moc_predefs.h --output-dep-file -o C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampdelegate.cpp C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/handbook_lab3/stampdelegate.h
+
+Output
+------
+moc: Cannot create C:/Users/dalvo/OneDrive/Документы/ChatGPT/ispu/ispu-qt-labs-completed/ispu-qt-completed/build-windows/handbook_lab3/handbook_lab3_autogen/EWIEGA46WW/moc_stampdelegate.cpp. Error: No such file or directory
+
+[4/58] Building CXX object CMakeFiles/studyplan_core.dir/StudyPlanner/core/studyplan.cpp.obj
+ninja: build stopped: subcommand failed.

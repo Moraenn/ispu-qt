@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Кроссплатформенные приложения",
+      "title": "Сериализация справочника",
+      "deadline": "2026-10-09",
+      "priority": 2,
+      "status": 1,
+      "plannedMinutes": 120
+    },
+    {
+      "id": 2,
+      "subject": "Базы данных",
+      "title": "Подготовить запросы",
+      "deadline": "2026-10-04",
+      "priority": 1,
+      "status": 0,
+      "plannedMinutes": 90
+    },
+    {
+      "id": 3,
+      "subject": "Методы принятия решений",
+      "title": "Решить задачу оптимизации",
+      "deadline": "2026-10-06",
+      "priority": 1,
+      "status": 2,
+      "plannedMinutes": 60
+    },
+    {
+      "id": 4,
+      "subject": "Кроссплатформенные приложения",
+      "title": "Подготовка к защите",
+      "deadline": "2026-10-13",
+      "priority": 0,
+      "status": 0,
+      "plannedMinutes": 60
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "taskId": 1,
+      "date": "2026-10-05",
+      "minutes": 45,
+      "note": "Запись и чтение коллекции"
+    },
+    {
+      "id": 2,
+      "taskId": 3,
+      "date": "2026-10-05",
+      "minutes": 60,
+      "note": "Решение и проверка"
+    }
+  ]
+}

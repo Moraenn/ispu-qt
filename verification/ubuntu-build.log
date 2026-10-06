@@ -1,0 +1,3 @@
+[1/4] Automatic MOC for target qt_smoke
+[2/3] Building CXX object tests/qt/CMakeFiles/qt_smoke.dir/qt_smoke.cpp.o
+[3/3] Linking CXX executable bin/qt_smoke

@@ -1,0 +1,8 @@
+digraph G { graph [rankdir=TB, bgcolor="white", nodesep=0.24, ranksep=0.40, pad=0.10]; node [shape=plain, fontname="Tinos", fontsize=12]; edge [fontname="Tinos", fontsize=10, arrowsize=0.7];
+w [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">PlannerWindow : QMainWindow</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">− addTask(), editTask()<BR ALIGN="LEFT"/>− addSession()</TD></TR></TABLE>>];
+d [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">TaskDialog : QDialog</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ setTask(), task()</TD></TR></TABLE>>];
+sd [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">SessionDialog : QDialog</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ session()</TD></TR></TABLE>>];
+sw [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">SummaryWidget : QWidget</TD></TR><TR><TD ALIGN="LEFT" BALIGN="LEFT">+ refresh()</TD></TR></TABLE>>];
+c [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7"><TR><TD ALIGN="CENTER" BALIGN="CENTER">PlannerController<BR ALIGN="CENTER"/>changed()</TD></TR></TABLE>>];
+w -> d [style=dashed,label="создаёт"]; w -> sd [style=dashed,label="создаёт"]; w -> sw [arrowtail=diamond,dir=both,arrowhead=none]; sw -> c [style=dashed,label="summary(), bySubject()"]; {rank=same;d;sd;}
+}

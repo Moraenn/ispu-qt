@@ -1,0 +1,21 @@
+********* Start testing of QtSmoke *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : QtSmoke::initTestCase()
+PASS   : QtSmoke::calculatorArithmetic()
+PASS   : QtSmoke::calculatorScientificAndKeyboard()
+PASS   : QtSmoke::alarmControls()
+PASS   : QtSmoke::stampModelValidation()
+PASS   : QtSmoke::stampRoundTrip()
+PASS   : QtSmoke::damagedStampKeepsCollection()
+PASS   : QtSmoke::plannerRoundTrip()
+PASS   : QtSmoke::invalidJsonPreservesData()
+PASS   : QtSmoke::failedWriteDoesNotCommit()
+PASS   : QtSmoke::filteringAndIds()
+PASS   : QtSmoke::csvEscaping()
+PASS   : QtSmoke::alarmSingleTrigger()
+PASS   : QtSmoke::stampDialogSaveReopenAndCancel()
+PASS   : QtSmoke::plannerDialogWorkflowAndRestart()
+PASS   : QtSmoke::plannerBackupAndRestore()
+PASS   : QtSmoke::cleanupTestCase()
+Totals: 17 passed, 0 failed, 0 skipped, 0 blacklisted, 1468ms
+********* Finished testing of QtSmoke *********
